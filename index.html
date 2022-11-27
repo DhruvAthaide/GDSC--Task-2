@@ -6,23 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task 2</title>
+    <!--This is to style the webpage-->
     <style>
-        html
-        {
+        html {
             background-color: #99ffcc;
         }
-        h1
-        {
+
+        h1 {
             color: darkblue;
         }
     </style>
 </head>
+
 <body>
     <fieldset>
         <legend align="center"><b>GDSC - Task 2</b></legend>
         <h1 align="center" onmouseover="mouseover()" onmouseout="mouseout()" id="task1">Hover your Mouse over Me!</h1>
         <br>
         <form align="center">
+            <!--This is to take user input of two numbers and then perform Arithmetic Operations on it-->
             1st Number : <input type="text" id="num1"><br>
             2nd Number: <input type="text" id="num2"><br>
             <input type="button" onclick="Addition()" value="Addition">
@@ -30,69 +32,31 @@
             <input type="button" onclick="Multiplication()" value="Multiplication">
             <input type="button" onclick="Division()" value="Division"><br><br>
 
+            <!--This is to send the value inputed by the user to the console-->
             Send a Value to Console:<input type="text" id="num3"><br>
             <input type="button" onClick="ConsoleNumber()" value="Submit Number"><br><br>
         </form>
         <form align="center">
-        <h1 id="textmanip">Text Manipulator:</h1>
-        <input type="button" onclick="textmanipulator()" value="Press to Manipulate Text!"><br><br>
-        
-        <h1 id="textchanger">This H1 tag will change to H5</h1>
-        <input type="button" onclick="textsize()" value="Press to change H1 to H5!">
+            <!--This is to Change the Text in the H1 Tag-->
+            <h1 id="textmanip">Text Manipulator:</h1>
+            <input type="button" onclick="textmanipulator()" value="Press to Manipulate Text!"><br><br>
+
+            <!--This is to change H1 tag to h5 Tag-->
+            <h1 id="textchanger">This H1 tag will change to H5</h1>
+            <input type="button" onclick="textsize()" value="Press to change H1 to H5!">
         </form>
-        <h1 align="center">This is an H1 Tag!</h1>
-        <h1 align="center">This is the second H1 Tag!</h1>
+
+        <!--This is the Fourth and Fifth H1 Tag-->
+        <h1 align="center">This is the fourth H1 Tag!</h1>
+        <h1 align="center">This is the fifth H1 Tag!</h1><br><br>
+
+        <div align="center">
+        <!--This is when the user inputs 7, then the team members will be shown in the console-->
+        <b>Enter 7 to Show Team Members in the Console:</b><input type="text" id="team"><br>
+        <input type="button" onclick="teammember()" value="Submit a Value!">
+        </div>
     </fieldset>
 </body>
-<script>
-    function mouseover()
-    {
-        document.getElementById("task1").style.color = "red";
-    }
-
-    function mouseout()
-    {
-        document.getElementById("task1").style.color = "darkblue";
-    }
-    function Addition()
-    {
-        num1 = document.getElementById("num1").value;
-        num2 = document.getElementById("num2").value;
-        console.log(num1 + num2);
-    }
-    function Subtraction()
-    {
-        num1 = document.getElementById("num1").value;
-        num2 = document.getElementById("num2").value;
-        console.log(num1 - num2);
-    }
-    function Multiplication()
-    {
-        num1 = document.getElementById("num1").value;
-        num2 = document.getElementById("num2").value;
-        console.log(num1 * num2);
-    }
-
-    function Division()
-    {
-        num1 = document.getElementById("num1").value;
-        num2 = document.getElementById("num2").value;
-        console.log(num1 / num2);
-    }
-    function ConsoleNumber()
-    {
-        num3 = document.getElementById("num3").value;
-        console.log("Number is: ", num3);
-    }
-    function textmanipulator()
-    {
-        document.getElementById("textmanip").innerHTML = "This Text has been Manipulated!";
-    }
-    function textsize()
-    {
-        var el = document.querySelector('#textchanger');
-        el.outerHTML = '<h5>' + el.innerHTML + '</h5>';
-    }
-</script>
+<script src="javascript.js"></script>
 
 </html>
